@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- additional meta tags -->
+    <meta name="keywords" content="eventsite, events, skill workshop events">
+    <meta name="description" content="Events booking site for skills and learning">
+    <meta name="author" content="George Escobar">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Skills4You - Main Page</title>
+
+
+</head>
+
+<link rel="stylesheet" href="\static\css\styles.css">
+
+<body>
+
+    <header>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="/" class="navbar-brand"><img src="\static\img\skills4youicon.png" class="img-fluid"
+                        alt="Skills4You" height="100" width="100"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <div class="btn-group ms-auto">
+                        <a class="nav-item nav-link disabled text-muted" href="#">Welcome {{current_user.name}}</a>
+                        <button type="button" class="btn buttons btn-secondary btn-dark dropdown-toggle me-4"
+                            data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            MY ACCOUNT
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                            <li>
+                                <a class="nav-link" aria-current="page" href="/login">
+                                    <h5>Sign In/ Sign Up</h5>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" aria-current="page" href="/history">
+                                    <h5>Booking history</h5>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" aria-current="page" href="/logout">
+                                    <h5>Logout</h5>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- events dropdown -->
+                        <button type="button" class="btn buttons btn-secondary btn-dark dropdown-toggle me-4"
+                            data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            EVENTS
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                            <li>
+                                <a class="nav-link" aria-current="page" href="/eventcreation">
+                                    <h5>Create an event</h5>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" aria-current="page" href="/eventmanage">
+                                    <h5>Manage my events</h5>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                
+
+                </div>
+        </nav>
+
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+<!-- FOOTER -->
+<footer class="bg-dark text-center text-white">
+    <div class="container p-4 pb-0">
+        <section class="">
+            <form action="">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-auto">
+                        <p class="pt-2">
+                            <strong>Sign up for our newsletter!</strong>
+                        </p>
+                    </div>
+
+                    <div class="col-md-5 col-12">
+                        <!-- Email input -->
+                        <div class="form-outline form-white mb-4">
+                            <input type="email" id="form5Example2" class="form-control" />
+                            <label class="form-label" for="form5Example2"></label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-auto">
+                        <!-- Submit button -->
+                        <button type="submit" class="btn buttons btn-dark mb-4">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p>© 2021 Copyright: <a class="text-white" href="index.html">Skills4You.com</a></p>
+    </div>
+</footer>
+
+</html>

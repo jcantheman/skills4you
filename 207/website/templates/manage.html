@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row mt-5 mx-5 justify-content-left mb-2">
+    <h1>Your Events:</h1>
+
+    
+
+    </div>
+    <div class="row mt-5 mx-5 justify-content-left mb-2">
+        {% for events in events %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-4 col-xxl-4 mb-5">
+
+            <div class="card cards"  style="max-width:70%;">
+
+                <div class="card-body justify-content-center">
+                    <div class="card-title d-flex mb-5 justify-content-center">
+                        <h2>
+                            {{events.title}}
+                        </h2>
+                    </div>
+                    <div class="card-text d-flex mb-3 justify-content-center">
+                        <p>{{events.date}}</p> 
+                    </div>
+                    <div class="card-text d-flex mb-3 justify-content-center">
+                        <p>{{events.status}}</p> 
+                    </div>
+                        <div class="text-center mb-2">
+                            <button type="button" class="btn buttons btn-lg btn-dark btn-primary mb-2"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal" name="submit_button" value="{{events.title}}">
+                                Edit Event
+                            </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+                {% endfor %}
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+
+<!-- <br><br><br> -->
+{% endblock %}

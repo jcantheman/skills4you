@@ -1,0 +1,48 @@
+body {
+    background-color: #D16B12;
+  }
+
+h5 {
+
+    font-family:Arial Narrow, sans-serif;
+    font-weight: bold;
+    color:#5AE5F3;
+    font-size:20px;
+    font-variant: small-caps;
+}
+
+h1, h2, h3, h4, h6
+{
+    color:#E1E1E1;
+    font-family:Arial Narrow, sans-serif;
+}
+
+p
+{
+    font-family:Arial Narrow, sans-serif;
+    font-size:20px;
+    color:#E1E1E1;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.buttons 
+{
+    background-color:#1A9DA5;
+    font-family:Arial Narrow, sans-serif;
+    
+}
+
+.modals
+{
+    background-color: #D16B12;
+}
+
+.cards
+{
+
+    background-color:#333435;
+}
+
+
+

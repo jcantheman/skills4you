@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row mt-5 mx-5 justify-content-center">
+
+        <div class="col-12 col-sm-10 col-md-8 col-lg-8 col-xl-6 col-xxl-4">
+            <div class="card cards mb-1 ">
+                <img src="\static\img\artsclass.jpg" class="img-fluid img-thumbnail" alt="eventsimage">
+                <div class="card-body mt-2">
+                    <div class="card-title d-flex justify-content-center mb-4">
+                        <h2>Event - Arts Class</h2>
+                    </div>
+                    <p class="card-text d-flex">About this event:</p>
+                    <p class="card-text d-flex mt-4">Learn how to paint like a 'Picasso'
+                        or a 'da Vinci' in this highly interactive and exciting arts class!</p>
+                    <p class="card-text d-flex mt-5">Date and time: 20 September, 2021. 4:00pm
+                        - 5:00pm AEST</p>
+                    <p class="card-text d-flex mt-5 mb-5">Location: 457 George Street, Brisbane</p>
+
+                    {{wtf.quick_form(form, button_map={'submit': 'success'})}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<hr>
+
+<!-- Comments -->
+<div class="row">
+    <div class="col-md-12">
+        <h2>Comments</h1>
+    </div>
+</div>
+
+<div class="row border-bottom">
+    {{wtf.quick_form(form,"/eventbooking/{0}/comment".format(id))}}
+    {% for comment in comments %}
+    <div class="col-md-12">
+        <b>{{comment.user.name}} <span class="ml-2 text-muted">January 2017</span></b>
+        <p>{{comment.text}}</p>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}

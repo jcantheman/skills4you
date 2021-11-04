@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+
+{% block content %}  
+        <div class="container-flex">
+            <!-- Company Logo -->
+            <div class="row mt-5 mx-5">
+                <div class="col-12 col-sm-12 col-md-6">
+                    <img src="\static\img\skills4you.jpg" class="img-fluid img-thumbnail" alt="Skills4You">
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6">
+                    <div class="me-10 p-5 mb-4 bg rounded-3">
+                        <h1 class="display-4 fw-bold">Skills4You workshops!</h1>
+                        <p class="col-md-8 fs-2">Learn and grow from community hosted events!</p>
+                    </div>
+                </div>
+                <div class="container-flex">
+                    <div class="row mt-5">
+                        <div class="col-5 d-grid gap-5 col-sm-5 col-md-3 col-lg-2 col-xl-2">
+                            <button type="button" class="buttons btn btn-dark btn-primary btn-lg">ALL EVENTS</button>
+                        </div>
+                        <!-- Categories dropdown button -->
+                        <div class="col-5 d-grid gap-5 col-sm-5 col-md-3 col-lg-2 col-xl-2">
+
+                            <select class="form-select text-white" style="background-color:#1A9DA5"
+                                aria-label="Default select example">
+                                <option selected>CATEGORIES</option>
+                                <option value="1">ARTS</option>
+                                <option value="2">COOKING</option>
+                                <option value="3">TECHNOLOGY</option>
+                                <option value="4">FITNESS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-flex">
+            <div class="row mt-5 mx-5 my-5">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 pb-3 pt-3">
+                    <div class="cards" style="width: 18rem;">
+                        <img src="\static\img\artsclass.jpg" class="img-fluid img-thumbnail" alt="eventimage">
+                        <div class="card-body mx-4 ms-4">
+                            <h5 class="card-title">Arts Class</h5>
+                            <p class="card-text">Date: 20 September, 2021</p>
+                            <div class="card-text">
+                                <p>Location: 457 George Street, Brisbane</p>
+                            </div>
+                            <div class="card-text">
+                                <p>Event status: Upcoming</p>
+                            </div>
+                            <div class="row">
+                            <div>
+                            <a href="/eventdetails" class="buttons btn btn-dark btn-primary btn-lg mt-4 ms-4">EVENT
+                                DETAILS</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <a href="/eventdetails" class="buttons btn btn-dark btn-primary btn-lg mt-4 ms-4">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+
